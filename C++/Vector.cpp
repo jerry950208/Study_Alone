@@ -1,19 +1,18 @@
 //https://hwan-shell.tistory.com/119(참고)
 
-#include <iostream>
-#include <vector>
-
-using namespace std;
-
-int main(void){
-	
-	int N;
-	cin >> N;
 	vector<int> v1(N);					// N만큼 벡터 생성 후 0으로 초기화
 	vector<int> v2 = {1, 2, 3};			// 벡터 생성후 1, 2, 3으로 초기화
 	vector<int> v3 = {{1, 2},{3, 4}};	// 2차원 벡터 선언 및 초기화
 	vector<vector<int>> v4				// 2차원 벡터 생성
+	
 
+	//////////////////////////////////////////////////////////////////////
+	pair<int,string> v;					//v라는 변수에 int형, string형을 저장
+	vector<pair<int,string>> test;		//test에 int형, string형을 저장할수 있는 벡터를 생성
+	
+	cin >> v.first >> v.second;			//v.first = int형, v.second = string형 입력
+	test.push_back(v)					//v에 저장되어있는 값들을 test에 넣는다
+	/////////////////////////////////////////////////////////////////////
 
 	//v.begin()		// 벡터 시작점의 주소 값 반환
 	//v.end()		// 벡터 끝부분 + 1 주소값 반환
@@ -31,4 +30,4 @@ int main(void){
 	//v.erase(시작위치, 끝 위치)				//사용자가 원하는 index	값을 지운다
 	//v.clear()			//벡터의 모든 요소를 지운다
 	//v.swap(벡터변수)	//벡터와 벡터를 스왑한다
-}
+
