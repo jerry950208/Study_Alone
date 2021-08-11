@@ -1,0 +1,15 @@
+첫번째줄 - d = 폴더, l = 링크, - = 문서
+두번째줄부터 rwxrwxrwx가 있을수 있는데
+첫번째 rwx는 u(사용자권한 user)
+두번째 rwx는 g(사용자 그룹의 권한 group)
+세번째 rwx는 o(다른 사용자의 권한 other)
+
+r = read(읽기)
+w = write(쓰기)
+x = excute(실행)
+를 의미한다
+
+-권한 변경하기(chmod)
+1.chmod 777 test -> test라는 파일이나 폴더에 모든 권한(rwx)주기
+2.chmod ugo-x test -> test라는 파일이나 폴더 모두에게 실행권한(x) 빼기
+3.chmod g+x test -> test라는 파일이나 폴더에 g에게 x권한 주기 
