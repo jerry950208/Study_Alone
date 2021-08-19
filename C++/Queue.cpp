@@ -3,6 +3,14 @@
 
 queue<int> q; 	//큐 선언할때는 스택과 같은 형태
 queue<string> q;
+
+//	 우선순의 큐(선언)
+priority_queue<자료형, Container, 비교함수> 변수형	//선언한 자료형 변수형들을 비교함수에 따라 정렬한다
+//Ex) priority_queue<int, vector<int>, compare> pq
+//int형 변수들을 compare 우선순위에 따라 정렬하는 pq라는 이름의 우선순위큐를 선
+
+priority_queue<자료형> 변수형		//선언한 자료형 변수들을 내림차순에 따라 정렬한다
+
 //	추가 및 삭제
 	q.push(X)	// 큐의 가장 뒤에 데이터 추가
 	q.pop() 	// 큐에 가장 앞에 있는 데이터 삭제
