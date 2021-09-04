@@ -79,4 +79,28 @@ int main(void){
 		return 0;
 	}
 	*/
-}
+
+	//---------------------------------------------------------------------
+	//s.substr(start, length)
+	
+	//Example
+	/*
+	#include <iostream>
+	#include <string>
+	using namespace std;
+	
+	int main(void){
+		
+		string s = "";
+		string output_s = "";
+		cin >> s;
+		
+		//case 1
+		output_s = s.substr(2, 2);
+		
+		//case 2
+		output_s = s.substr(s.length()/2, 2);
+
+		return 0;
+	}
+	*/
