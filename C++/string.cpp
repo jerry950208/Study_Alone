@@ -115,4 +115,23 @@ int main(void){
 	//int toupper(int c) : 매개변수로 들어온 인자가 소문자인 경우 대문자로 반환한다
 	//int tolower(int c) : 매개변수로 들어온 인자가 대문자인 경우 소문자로 반환한다
 	// *다른 모든 문자는 그대로 반환해준다.
+	//-----------------------------------------------------------------------
+
+	//atoi : 문자열을 입력받아서 int 타입으로 변환하여 리턴
+	//c_str : 반환형이 char* 이므로 해당하는 string의 첫번째 문자의 주소값(포인터를 반환)
+	//strint --> char * --> int(한번에 int로 변환)
+	//Example
+	/*
+	#include <iostream>
+	#include <algorithm>
+	using namespace std;
+
+	int main(void){
 	
+		string s = "2017";
+		int num = atoi(s.c_str());
+
+		printf("%d\n", ++num);
+		cout << ++num << endl;
+		return 0;
+}*/
