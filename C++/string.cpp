@@ -1,3 +1,4 @@
+/*
 #include <iostream>
 #include <string>
 using namespace std;
@@ -16,7 +17,7 @@ int main(void){
 	//to_string(double num);
 	//등등 여러가지 변수형이 매개변수로 올수 있다
 	// 숫자 타입의 데이터를 안전하게 스트링 타입으로 변경하도록 하는 함수
-	
+*/	
 	//Example
 	/*
 	//Example
@@ -135,3 +136,27 @@ int main(void){
 		cout << ++num << endl;
 		return 0;
 }*/
+
+//---------------------------------------------
+//find함수 사용
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main(void){
+
+	string str = "This is a string";
+	
+	if(str.find("is") != string::npos){
+		cout << "찾는 문자가 존재합니다" << endl;
+		
+		int index = str.find("is");
+	}
+	
+	return 0;
+
+}
+
+//반환값은 찾는 문자의 첫번째 인덱스 값
+//찾는 문자가 없을 경우는 string::npos를 리턴한다(npos는 no position으로 쓰레기값 나옴)
