@@ -173,4 +173,30 @@ int main()
 
     return 0;
 }
+    // ----------------------------------------------------------------------------------------------------------------
+	
+	//max_element(), min_element() 함수
+	//해당 함수의 헤더는 #include <algorithm>
+	//해당 함수는 값 자체를 리턴하지 않고 그 값의 주로를 리턴하는데 iterator를 리턴하기도 한다
+	//Ex)
+	#include <iostream>
+	#include <algorithm>
+	#include <vector>
+	using namespace std;
 
+	int main(void){
+		
+		int size,val;
+		cin >> size;
+		vector<int> v;
+
+		for(int i=0; i<size; i++){
+			cin >> val;
+			v.push_back(val);
+		}
+
+		cout << "max값 : " << *max_element(v.begin(), v.end()) << endl;
+		cout << "min값 : " << *min_element(v.begin(), v.end()) << endl;
+		
+		return 0;
+	}
