@@ -3,7 +3,7 @@
 
 import java.util.Arrays;
 
-public class Array_OneTwoArray3{
+public class Array_OneTwoArray4{
 
 	public static void main(String[] args){
 
@@ -77,7 +77,51 @@ public class Array_OneTwoArray3{
 		String[] strArr = {"hong", "kim", "park"};
 		System.out.println(strArr[0].charAt(2));	//---n만 출력, 2번째 idx에 있는 글자를 출력하라
 		System.out.println(strArr[1].charAt(0));
-		System.out.println(strArr[2].charAt(strArr.length - 1));	
-	}
+		System.out.println(strArr[2].charAt(strArr.length - 1));
+		
 
+		//[9] : 반복문에서 charAt() 메서드 사용
+		
+		//[9-1] 잘못된 예1
+		//기대값 : hongkimpark
+
+		for(int i=0; i<strArr.length; i++)
+			System.out.print(strArr[i].charAt(i));		// ---hir --> 이중 반복문을 사용해줘야 한다;;
+		System.out.println();
+
+		//[9-2] 잘못된 예2
+		for(int i=0; i<strArr.length; i++){
+			for(int j=0; j<strArr.length; j++)
+				System.out.print(strArr[i].charAt(j));	//honkimpar
+			System.out.println();
+		}
+
+		//[9-3]
+		System.out.println(strArr.length);	//3
+		//System.out.println(strArr[0].length); 	//Err --> 1차원 배열이기에 불가능하다
+		
+		System.out.println(strArr[0].length());		//hong --> 4
+		//length뒤에 ()를 해주면 해당 인덱스의 길이를 계산해서 리턴해준다
+		
+
+		//[9-4] 
+		for(int i=0; i<strArr.length; i++)
+			for(int j=0; j<strArr[i].length(); j++)
+				System.out.print(strArr[i].charAt(j));
+		
+		System.out.println();
+	
+
+		//[10] : length vs length()
+		//length = 배열의 길이
+		//length() = 문자열의 길이
+
+		int[] aaa = new int[10];
+		System.out.println(aaa.length); 	// ----10
+
+		String bbb = "Welcome to Seoul";
+		System.out.println(bbb.length());	// ----16(공백도 포함해준다)
+		
+
+	}
 }
