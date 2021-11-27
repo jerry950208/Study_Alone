@@ -28,15 +28,27 @@ public class Array_TwoArrayUserInput2{
 		//[5] : 2차원 배열 요소 --> 사용자가 입력하는 값으로 셋팅
 		for(int i=0; i<Row; i++){
 			
-			System.out.printf("%d번째 행에 입력할 문자 %d개를 차례대로 입력하고 [Enter] 치세요", i+1, Column);
+			System.out.printf("%d번째 행에 입력할 문자 %d개를 차례대로 입력하고 [Enter] 치세요 : ", i+1, Column);
 			strAr[i] = sc.next();
 
 			for(int j=0; j<Column; j++){
 
-				gameMap[i][j] = strAr[i].charAt(j);
+				gameMap[i][j] = strAr[i].charAt(j);		// j인덱스에 있는 값을 하나씩 가져와서 --> gameMap 좌표에 입력하기
+				
 			}
 		}
 		
+		//[6] : 2차원 배열에 들어있는 값 출력하기
+		//System.out.println(strAr);		//strAr의 주소값 출력
+		
+
+		System.out.println("-------------------------------------");
+		for(int i=0; i<Row; i++){
+			for(int j=0; j<Column; j++)
+				System.out.print(gameMap[i][j]);
+			System.out.println();
+		}
+		System.out.println("-------------------------------------");
 		
 	}
 }
